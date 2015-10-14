@@ -22,10 +22,11 @@ Run this on the build machine to connect it to the GitLab CI server.  If you're 
     docker exec -it gitlab-runner gitlab-runner register \
       --non-interactive \
       --url "https://ci.gitlab.com/" \
-      --registration-token "REGISTRATION_TOKEN" \
       --description "embedded" \
       --executor "docker" \
-      --docker-image kylemanna/ci-embedded:latest
+      --docker-image kylemanna/ci-embedded:latest \
+      --registration-token $REGISTRATION_TOKEN
+
 
 This will create a runner on GitLab with the specified docker image.
 
