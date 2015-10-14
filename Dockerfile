@@ -19,4 +19,5 @@ RUN curl -sSL https://github.com/google/protobuf/releases/download/v3.0.0-beta-1
     make install && \
     cd python && \
     python setup.py build && \
-    python setup.py install
+    python setup.py install && \
+    cd ../.. && rm -rf protobuf-3.0.0-alpha-4
