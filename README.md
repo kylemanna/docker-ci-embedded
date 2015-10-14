@@ -28,3 +28,7 @@ Run this on the build machine to connect it to the GitLab CI server.  If you're 
       --docker-image kylemanna/ci-embedded:latest
 
 This will create a runner on GitLab with the specified docker image.
+
+## Reference
+
+* [GitLab: Using Docker Images](http://doc.gitlab.com/ci/docker/using_docker_images.html)
