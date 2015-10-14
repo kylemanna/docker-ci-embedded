@@ -9,7 +9,8 @@ RUN apt-get update && \
 
 # arm-none-eabi-gcc and newlib in Ubuntu 14.04 don't have nano.specs,
 # install manually.
-RUN curl -sSL https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q3-update/+download/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2 | tar xjf - --strip=1 -C /usr
+RUN curl -sSL https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q3-update/+download/gcc-arm-none-eabi-4_9-2015q3-20150921-linux.tar.bz2 | tar xjf - --strip=1 -C /usr && \
+    rm -rf /usr/share/doc/gcc-arm-none-eabi
 
 RUN curl -sSL https://github.com/google/protobuf/releases/download/v3.0.0-beta-1/protobuf-python-3.0.0-alpha-4.tar.gz | tar xzf - && \
     cd protobuf-3.0.0-alpha-4 && \
