@@ -7,7 +7,8 @@
 FROM debian:testing
 
 RUN apt-get update && \
-    apt-get install -y build-essential git cmake gcc clang python qemu-user \
+    apt-get install -y build-essential git cmake gcc clang python \
                        curl python-protobuf protobuf-compiler \
-                       gcc-arm-none-eabi && \
+                       gcc-arm-none-eabi qemu-user \
+                       valgrind && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
