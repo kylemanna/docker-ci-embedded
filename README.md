@@ -4,6 +4,10 @@ Includes the necessary tools to cross-compile code for ARM Cortex-M0/1/3/4 devic
 
 Anticipation is to use with *gitlab-ci-multi-runner* (and similar) continuous integration build environment.
 
+## Where are the Dockerfiles?
+
+Each Dockerfile lives in its own branch for it's respective upstream distribution release.  This enables Docker Hub to do smart builds and only builds the branches that change instead of rebuilding everything.
+
 ## GitLab Crash Course
 
 ### Create a GitLab Runner Container
