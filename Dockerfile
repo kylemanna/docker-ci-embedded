@@ -18,8 +18,20 @@ RUN \
     echo 'deb http://ppa.launchpad.net/team-gcc-arm-embedded/ppa/ubuntu xenial main' > /etc/apt/sources.list.d/gcc-arm-embedded.list && \
     apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D1FAA6ECF64D33B0 && \
     apt-get update && \
-    apt-get install -y build-essential git cmake gcc clang python qemu-user \
-                       curl python-protobuf protobuf-compiler \
-                       valgrind ninja-build gcc-arm-embedded && \
+    apt-get install -y \
+                        build-essential \
+                        clang \
+                        cmake \
+                        curl \
+                        gcc \
+                        git \
+                        ninja-build gcc-arm-embedded \
+                        openssh-client \
+                        protobuf-compiler \
+                        python \
+                        python-protobuf \
+                        qemu-user \
+                        valgrind \
+                   && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
